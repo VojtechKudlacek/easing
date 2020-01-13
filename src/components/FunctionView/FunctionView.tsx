@@ -40,7 +40,7 @@ const FunctionView: FunctionComponent<Properties> = ({ input }) => {
 		<div className="fnView">
 			<canvas ref={canvasRef} width={canvasSize} height={canvasSize} />
 			<h3>{input.name}</h3>
-			<code>{input.fn.toString()}</code>
+			<code>{input.code}</code>
 		</div>
 	);
 };

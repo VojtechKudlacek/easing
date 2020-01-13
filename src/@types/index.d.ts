@@ -4,6 +4,7 @@ interface LooseObject<T = any> {
 
 interface EaseFunction {
 	name: string;
+	code: string;
 	fn: (input: number) => number;
 }
 
