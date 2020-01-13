@@ -1,0 +1,96 @@
+@mixin clearfix {
+	content: '';
+  display: table;
+  clear: both;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: monospace;
+	margin: 0;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #fff;
+	color: #111;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+code {
+	font-family: monospace;
+}
+
+canvas {
+	font-family: 'VarelaRound';
+}
+
+main {
+	padding: 40px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 100;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 100;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: 100;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.fnGrid {
+	width: 1000px;
+	margin: auto;
+}
+
+.fnRow {
+	margin-bottom: 20px;
+	display: flex;
+	&:after {
+		@include clearfix();
+	}
+}
+
+.fnView {
+	float: left;
+	text-align: center;
+	width: 320px;
+	margin-right: 20px;
+	padding: 10px;
+	background: #edf1f5;
+	&:last-child {
+		margin-right: 0;
+	}
+	canvas {
+		display: block;
+		margin: auto;
+		background: #223344;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	code {
+		display: inline-block;
+		text-align: center;
+		padding: 10px 20px;
+		background: #223344;
+		box-shadow: 0 4px 7px -2px rgba(0, 0, 0, 0.4);
+		color: #fff;
+		border-radius: 3px;
+	}
+}
